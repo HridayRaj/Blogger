@@ -1,0 +1,59 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{url_for('static',filename='img/home-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{params['head']}}</h1>
+            <span class="subheading">{{params['title']}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+    <hr>
+    <h2> Upload new  files here</h2>
+        <hr>
+     <h2> Create a New post</h2>
+        <a href="/edit/0"> <button class="btn btn-primary" href="/edit/0"> Add </button></a>
+        <hr>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Title</th>
+        <th>Edit</th>
+          <th>Delete</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    {% for post in posts %}
+      <tr>
+        <td>{{post.Sno}}</td>
+        <td>{{post.Title}}</td>
+        <td><a href="/edit/{{post.Sno}}"><button class="btn btn-primary" href="/edit/{{sno}}">Edit </button></a></td>
+          <td><a href="/delete/{{post.Sno}}"> <button class="btn btn-primary">Delete </button></a></td>
+
+      </tr>
+     {% endfor %}
+    </tbody>
+
+  </table>
+      </div>
+    </div>
+  </div>
+<hr>
+<div class="clearfix">
+          <a class="btn btn-primary " href="/logout">Logout &rarr;</a>
+</div>
+ {% endblock %}

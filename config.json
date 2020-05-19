@@ -1,0 +1,16 @@
+{
+    "params":
+    {
+      "local_server":"True",
+      "local_uri":"mysql://root:@localhost/blogpost",
+      "prod_uri":"mysql://root:@localhost/blogpost",
+      "head":"Blogspot",
+      "title":"Hriday`s Blog",
+      "fb_url":"https://www.facebook.com/hriday",
+      "tw_url":"https://www.twitter.com/hridayraj",
+      "no_of_post":"5",
+      "blog_name":"Blogpost_creations",
+      "uname":"Hriday",
+      "upass":"hriday"
+    }
+  }
